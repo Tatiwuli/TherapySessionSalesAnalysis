@@ -1,0 +1,6 @@
+#Imports for data cleaning and transformation
+pandas
+numpy
+random
+unidecode
+matplotlib

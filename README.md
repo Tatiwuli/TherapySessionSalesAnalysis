@@ -126,7 +126,7 @@ The following image illustrates how the datasets are conected in **Tableau** to 
 The final insights are delivered via a **multi-page Tableau Dashboard**. 
 
 To provide a **clear overview of the Tableau design**, I created a diagram that maps out the **dashboard pages** and the **business questions each page addresses**:
-![Tableau Design Overview](images/miro-board.jpg)
+![Tableau Design Overview](images/miro-board.jpeg)
 
 
 Due to **data confidentiality**, I have compiled a summary of insights and recorded specific dashboard sections in a **Notion Page**.  

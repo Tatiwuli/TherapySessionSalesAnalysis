@@ -65,47 +65,61 @@ The following datasets were cleaned and transformed in **Jupyter Notebook**. The
 **Source:** Registration dataset
 
 **Purpose:** Contains basic user information for demographic analysis and user segmentation.
+
 **Processing:** Checked for null values, duplicates, and invalid entries before exporting to Tableau.
+
 **Final Use:** Used for age and gender analysis and as a base dataset for joining transactions.
 
 ### 2️⃣ Appointments Dataset
 
 **Source:** Appointments dataset
+
 **Purpose:** Stores all user sessions until the analysis cutoff date (August 31, 2024).
+
 **Processing:**
    - Identified and handled null and duplicated values.
    - Reclassified session_status to distinguish between completed, canceled, and no-show sessions.
    - Created an `is_first_session` column to differentiate free and paid sessions.
+
 **Final Use:** Used for analyzing user session behaviors, cancellations, and free trial engagement.
 
 ### 2.1 Cancel Rescheduled Dataset 
 
 **Source:**  Appointments Dataset
+
 **Purpose:** Tracks users who canceled their free session and whether they rescheduled.
+
 **Processing:**
    - Created an `is_valid_cancel` column to classify cancellations as valid or invalid based on the cancellation time.
    - Merged session data with payment data to check if users rescheduled before purchasing a paid session.
    - Created a `has_reschedule` column to indicate whether a user rescheduled their free session.
+
 **Final Use**  Helps measure user engagement with the free trial
 
 ### 3️⃣ Purchase Dataset 
 **Source:** Payments dataset
+
 **Purpose:**  Stores all user payment transactions.
+
 **Processing:** 
 - Created a `package` column that shows the number of sessions purchased by each user
 - Created a `purchase_position` column that indicates a purchase's position in all user purchases. It helps identify first-time and repeated purchases.
 - Created a `days_between_purchases` column to measure time intervals between purchases.
+
 **Final Use:** Used to analyze user retention, package preference, and purchase patterns.
 
 ### 4️⃣ User Status Dataset
 
 **Source:** Appointments and Payments dataset
+
 **Purpose:** Classifies users into status categories based on their last purchase and credit balance as of the analysis cutoff date (August 31, 2024.)
+
 **Processing:**
 - Exploratory analysis on days_between_purchases to establish criteria for user status classification.
 - Created a `last_purchase_date` column to  track the user's last purchase
 - Created a `has_credits` column to identify if the user has remaining session credits.
 - Use the new columns to classify the  user's status.
+
 **Final Use:** Used to track retention, churn, and identify users for targeted engagement strategies.
 
 

@@ -63,6 +63,7 @@ The following datasets were cleaned and transformed in **Jupyter Notebook**. The
 ### 1️⃣ Registration Dataset
 
 **Source:** Registration dataset
+
 **Purpose:** Contains basic user information for demographic analysis and user segmentation.
 **Processing:** Checked for null values, duplicates, and invalid entries before exporting to Tableau.
 **Final Use:** Used for age and gender analysis and as a base dataset for joining transactions.

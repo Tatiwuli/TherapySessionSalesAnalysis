@@ -1,7 +1,19 @@
 # Booking and Sales Analysis of a Telemedicine App 
 
+## 📌 Table of Contents
+
+1. [Project Overview](#project-overview)  
+2. [Key Areas of Analysis](#key-areas-of-analysis)  
+3. [Key Facts About the Userbase](#key-facts-about-the-userbase)  
+4. [Data Sources](#data-sources)  
+5. [Processed & Derived Datasets](#processed--derived-datasets)  
+6. [File Structure](#file-structure)  
+7. [Key Results](#key-results)
+   🔗**Access the summarized results here:** [Link](https://cooing-parsley-1bb.notion.site/Tableau-Dashboard-Key-Results-191ecbc620b480378371f0f9fcd0f766?pvs=4)  
+
+
 ## Project Overview
-I interned at a healthtech startup that provides a telemedicine app for B2B and B2C clients in Brazil and Canada. The app provides the following services:
+I interned at a health tech startup that provides a telemedicine app for B2B and B2C clients in Brazil and Canada. The app provides the following services:
 
 - Online consultations with specialists across 12 medical fields
 - Easy Access to Doctors' prescriptions

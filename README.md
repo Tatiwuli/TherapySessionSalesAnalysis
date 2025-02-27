@@ -28,10 +28,10 @@ To address this, I analyzed data from 2,000 users, including their registrations
 ## Key Areas of Analysis
 
 - **Conversion Funnel** – Measuring user conversion rates at different user journey stages, including booking rate, first purchase rate, and repurchase rate.  
-- **Registration to Booking** – Analyzing the booking rate, the average time between registration and first session, and behavioral differences across gender and age groups.  
-- **First Session Behavior** – Examining free session completion,cancellation, and no-show rates, and behavioral differences across gender and age groups.
-- **Purchase Patterns** – Analizing the purchase rate, purchase timings, Return of Investment, and the most purchased sessions packages. 
-- **Repurchase Patterns** – Evaluating repurchase frequency, package upgrade trends, and churn and retention rates across different user segments.  
+- **Registration to Booking** – Analyzing the booking rate, the average time between registration and the first session, and behavioral differences across gender and age groups.  
+- **First Session Behavior** – Examining free session completion, cancellation, no-show rates, and behavioral differences across gender and age groups.
+- **Purchase Patterns** – Analyzing the purchase rate, purchase timings, Return of Investment, and the most purchased session packages. 
+- **Repurchase Patterns** – Evaluating repurchase frequency, package upgrade trends, and churn and retention rates across user segments.  
 
 ---
 
@@ -69,12 +69,12 @@ The following datasets were cleaned and transformed in **Jupyter Notebook**. The
 
 ### 2️⃣ Appointments Dataset
 
-**Source:** Appoinments dataset
+**Source:** Appointments dataset
 **Purpose:** Stores all user sessions until the analysis cutoff date (August 31, 2024).
 **Processing:**
    - Identified and handled null and duplicated values.
    - Reclassified session_status to distinguish between completed, canceled, and no-show sessions.
-   - Created a `is_first_session` column to differentiate free and paid sessions.
+   - Created an `is_first_session` column to differentiate free and paid sessions.
 **Final Use:** Used for analyzing user session behaviors, cancellations, and free trial engagement.
 
 ### 2.1 Cancel Rescheduled Dataset 
@@ -82,18 +82,18 @@ The following datasets were cleaned and transformed in **Jupyter Notebook**. The
 **Source:**  Appointments Dataset
 **Purpose:** Tracks users who canceled their free session and whether they rescheduled.
 **Processing:**
-   - Created a `is_valid_cancel` column to classify cancellations as valid or invalid based on the cancellation time.
+   - Created an `is_valid_cancel` column to classify cancellations as valid or invalid based on the cancellation time.
    - Merged session data with payment data to check if users rescheduled before purchasing a paid session.
-   - Created `has_reschedule` collumn to indicate whether a user rescheduled their free session.
-**Final Use**  Helps measure user engagement with free trial
+   - Created a `has_reschedule` column to indicate whether a user rescheduled their free session.
+**Final Use**  Helps measure user engagement with the free trial
 
 ### 3️⃣ Purchase Dataset 
 **Source:** Payments dataset
 **Purpose:**  Stores all user payment transactions.
 **Processing:** 
-- Created `package` column that show the number of sessions purchased by each user
-- Created `purchase_position` column that indicates a purchase's position in all purchases of a user. It helps identifies first-time and repeated purchases.
-- Created `days_between_purchases` column to measures time intervals between purchases.
+- Created a `package` column that shows the number of sessions purchased by each user
+- Created a `purchase_position` column that indicates a purchase's position in all user purchases. It helps identify first-time and repeated purchases.
+- Created a `days_between_purchases` column to measure time intervals between purchases.
 **Final Use:** Used to analyze user retention, package preference, and purchase patterns.
 
 ### 4️⃣ User Status Dataset
@@ -101,14 +101,14 @@ The following datasets were cleaned and transformed in **Jupyter Notebook**. The
 **Source:** Appointments and Payments dataset
 **Purpose:** Classifies users into status categories based on their last purchase and credit balance as of the analysis cutoff date (August 31, 2024.)
 **Processing:**
-- Exploratory analysis on days_between_purchases to establish criterias for user status classification.
-- Created `last_purchase_date` column to  track user's last purchase
-- Created `has_credits` column to identify if the user has remaining session credits.
-- Use the new colums to classify user's status.
+- Exploratory analysis on days_between_purchases to establish criteria for user status classification.
+- Created a `last_purchase_date` column to  track the user's last purchase
+- Created a `has_credits` column to identify if the user has remaining session credits.
+- Use the new columns to classify the  user's status.
 **Final Use:** Used to track retention, churn, and identify users for targeted engagement strategies.
 
 
-The following image illustrates how the datasets are conected in **Tableau** to generate metrics and visualizations.  
+The following image illustrates how the datasets are connected in **Tableau** to generate metrics and visualizations.  
 
 ### Data Model 
 ![Tableau Design Overview](images\data-model.png)

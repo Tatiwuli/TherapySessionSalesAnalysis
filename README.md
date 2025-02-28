@@ -126,8 +126,7 @@ The following datasets were cleaned and transformed in **Jupyter Notebook**. The
 The following image illustrates how the datasets are connected in **Tableau** to generate metrics and visualizations.  
 
 ### Data Model 
-![Tableau Design Overview](images\data-model.png)
-
+![Data Model](images/data-model.png)
 
 ---
 
